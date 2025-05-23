@@ -1,85 +1,192 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>johnE.ai — Let’s Get Cooking</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0e0e0e;
-            color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            text-align: center;
-        }
+	<head>
+		<title>JohnE.ai</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="color-scheme" content="light only" />
+		<meta name="description" content="The worker-first culinary platform built from the pit up built on johnE.ai" />
+		<meta property="og:site_name" content="JohnE.ai" />
+		<meta property="og:title" content="JohnE.ai" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="The worker-first culinary platform built from the pit up built on johnE.ai" />
+		<link href="https://fonts.googleapis.com/css2?display=swap&family=Martian+Mono:ital,wght@0,400;1,400" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="assets/main.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<ul id="buttons01" class="buttons">
+						<li>
+							<a href="https://docs.google.com/document/u/0/d/1nXw5I4yh8PJWTRuSwrZYUgRaxExY7x_j/mobilebasic" class="button n01" role="button">Kitchen Closed (APPLY!!)</a>
+						</li>
+					</ul>
+					<div id="image01" class="style1 image" data-position="left">
+						<span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAxNDYyIDczNSIgd2lkdGg9IjE0NjIiIGhlaWdodD0iNzM1IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cmVjdCBmaWxsPSJ0cmFuc3BhcmVudCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg%3D%3D" data-src="assets/images/image01.png" alt="" oncontextmenu="return false;" ondragstart="return false;" /></span>
+					</div>
+					<ul id="buttons02" class="buttons">
+						<li>
+							<a href="#learnmore" class="button n01" role="button">Learn More</a>
+						</li>
+					</ul>
+					<p id="text01"><span class="p">JohnE, LLC<br />Oklahoma City, OK<br />© 2025 JohnE.ai · All rights reserved<br />Built for kitchens. Powered by real work.</span></p>
+					<h1 id="text02"><span class="p"># We’re cooking something new.<br />### Built by workers, for workers.<br />#### This is AI with a soul.</span></h1>
+					<div id="embed01">
+						<!-- qweoqwupeoiqwuewqe --><style>
+						#mepButton {
+						position: fixed;
+						bottom: 20px;
+						right: 20px;
+						background: #1e1e1e;
+						color: #64ff64;
+						border: none;
+						border-radius: 50%;
+						width: 60px;
+						height: 60px;
+						font-size: 24px;
+						cursor: pointer;
+						z-index: 9999;
+						box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+						}
+						#mepChat {
+						display: none;
+						position: fixed;
+						bottom: 90px;
+						right: 20px;
+						width: 320px;
+						height: 420px;
+						background: #111;
+						color: #fff;
+						font-family: monospace;
+						padding: 14px;
+						border-radius: 16px;
+						z-index: 9999;
+						box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+						}
+						#mepChat p {
+						margin-bottom: 10px;
+						}
+						#mepInput {
+						width: 100%;
+						padding: 8px;
+						font-size: 14px;
+						background: #222;
+						color: #64ff64;
+						border: none;
+						border-radius: 6px;
+						}
+						</style>
+						
+						<button id="mepButton">🧠</button>
+						<div id="mepChat">
+						<p><strong>MEP:</strong> I’m the brain of the new food industry.<br>Tell me what you’re working on — I’ll keep your hands moving and your mind clear.</p>
+						<div id="mepResponse" style="height: 260px; overflow-y: auto; font-size: 14px;"></div>
+						<input type="text" id="mepInput" placeholder="Type something..." />
+						</div>
+						
+						<script>
+						const mepButton = document.getElementById("mepButton");
+						const mepChat = document.getElementById("mepChat");
+						const mepInput = document.getElementById("mepInput");
+						const mepResponse = document.getElementById("mepResponse");
+						
+						mepButton.onclick = () => {
+						mepChat.style.display = mepChat.style.display === "none" ? "block" : "none";
+						};
+						
+						async function askMEP(inputText) {
+						mepResponse.innerHTML += `<p><strong>You:</strong> ${inputText}</p>`;
+						const headers = {
+						"Content-Type": "application/json",
+						"Authorization": "Authorization": "Bearer sk-xyzYourWholeSecretKey"
+						};
+						const body = {
+						model: "gpt-4o",
+						messages: [
+						{
+						role: "system",
+						content: "You are MEP, the AI brain of the new food industry. You help kitchen staff, prep cooks, dish, line, and chef teams stay organized, focused, and grounded. Give clear, practical advice. Always be respectful, real, and sometimes poetic. You work for Johne."
+						},
+						{
+						role: "user",
+						content: inputText
+						}
+						]
+						};
+						try {
+						const response = await fetch("https://api.openai.com/v1/chat/completions", {
+						method: "POST",
+						headers: headers,
+						body: JSON.stringify(body)
+						});
+						const data = await response.json();
+						const answer = data.choices?.[0]?.message?.content || "I'm thinking...";
+						mepResponse.innerHTML += `<p><strong>MEP:</strong> ${answer}</p>`;
+						mepResponse.scrollTop = mepResponse.scrollHeight;
+						} catch (err) {
+						mepResponse.innerHTML += `<p><strong>MEP:</strong> Error reaching the brain. Try again later.</p>`;
+						}
+						mepInput.value = "";
+						}
+						
+						mepInput.addEventListener("keydown", function (e) {
+						if (e.key === "Enter") {
+						const input = mepInput.value.trim();
+						if (input) askMEP(input);
+						}
+						});
+						</script><!-- mnbnbxmbzxmncbzxc -->
+					</div>
+					<div id="container01" class="container default">
+						<div class="wrapper">
+							<div class="inner">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="assets/main.js"></script>
+	
+<section id="intro" style="padding: 4rem 2rem; max-width: 900px; margin: auto; font-family: sans-serif;">
+  <h1 style="font-size: 2.5rem; font-weight: bold;">🧠 johnE.ai</h1>
+  <p style="font-size: 1.2rem; margin-top: 1rem;">
+    <strong>AI meets mise en place.</strong><br>
+    Built by real prep cooks for the future of food work.
+  </p>
+  <p style="margin-top: 1rem;">
+    johnE.ai is a worker-first AI platform that simplifies scheduling, inventory, and kitchen communication. 
+    No fluff. No corporate creep. Just faster flow and real-time backup for people who move fast.
+  </p>
 
-        .logo-container {
-            background: url('tape.png') no-repeat center;
-            background-size: contain;
-            width: 600px;
-            height: 150px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+  <h2 style="margin-top: 2rem;">🧰 What’s Inside</h2>
+  <ul style="line-height: 1.6;">
+    <li><strong>Fló</strong> — Shift-balanced, green-themed kitchen scheduler</li>
+    <li><strong>MEP</strong> — AI assistant for tasks, 86s, inventory, and memory</li>
+    <li><strong>Docs</strong> — Recipes, systems, prep bibles</li>
+    <li><strong>Ethics</strong> — Centered on cooks, not capital</li>
+  </ul>
 
-        h1 {
-            font-size: 2.2rem;
-            color: black;
-            margin: 0;
-        }
+  <h2 style="margin-top: 2rem;">🚀 Try MEP</h2>
+  <p><a href="https://typebot.co/mep-mise-en-place-ai-7en1whu" target="_blank"
+        style="display: inline-block; margin-top: 0.5rem; padding: 0.75rem 1.5rem; background: #000; color: #fff; text-decoration: none; border-radius: 5px;">
+        🗣️ Talk to MEP – Live Assistant
+     </a>
+  </p>
 
-        a {
-            margin-top: 2rem;
-            font-size: 1.2rem;
-            color: #ff69b4;
-            text-decoration: none;
-            font-weight: bold;
-            border: 2px solid #ff69b4;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
+  <h2 style="margin-top: 2rem;">🎯 Why?</h2>
+  <p>
+    Because food workers deserve tech that respects them. <br>
+    We’ve seen the breakdowns — last-minute schedules, broken prep flow, burnout. johnE.ai is here to fix that.
+  </p>
 
-        a:hover {
-            background-color: #ff69b4;
-            color: black;
-        }
+  <h2 style="margin-top: 2rem;">🛠️ Open Kitchen Ethos</h2>
+  <p>
+    We’re open to dev collabs, grant partners, and hospitality rebels. <br>
+    Reach out via <a href="https://github.com/wegettingit" target="_blank">GitHub</a> or <a href="mailto:johnethany@icloud.com">email</a>.
+  </p>
+</section>
 
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.9rem;
-            opacity: 0.5;
-        }
-    </style>
-</head>
-<body>
-    <div class="logo-container">
-        <h1>johnE.ai</h1>
-    </div>
-    <a href="https://chat.openai.com/gpts" target="_blank">👨‍🍳 Talk to MEP — Your Kitchen Assistant</a>
-    <footer>&copy; 2025 JohnE, LLC — Built by weggetingit</footer>
-
-    <!-- Typebot MEP floating chat widget -->
-    <script src="https://cdn.typebot.io/typebot-chat.js"></script>
-    <script>
-      typebotChat.init({
-        typebot: "johnemep",  // Replace with your actual Typebot slug if you change it
-        previewMessage: {
-          message: "👋 Talk to MEP — your kitchen assistant",
-          autoShow: false,
-        },
-        theme: {
-          button: { backgroundColor: "#ff69b4" }
-        }
-      });
-    </script>
 </body>
 </html>
