@@ -1,35 +1,39 @@
-# 🍽️ johne.ai – Kitchens Rewritten
+# johnE.ai — Kitchens Rewritten
 
-Hi, I'm Johne (they/he/she) — a chef, founder, and AI systems designer.  
-I’m building **johnE.ai**, a human-first hospitality platform powered by ethical automation.  
-From **Fló**, the kitchen scheduler, to **MEP**, the mise-en-place memory AI, this is a system for people like me — kitchen workers who deserve better.
+A human-first AI platform rebuilding kitchen systems from the pit up.
 
-🛠️ Actively building:  
-- [Fló Scheduler](https://...) – AM/PM labor blocks, fair shift balance.  
-- [MEP Assistant](https://...) – kitchen AI brain.  
-- [Vision Docs](https://...) – from fire to future.
-
-
-## 🧭 Core Beliefs
-
-- 🧠 **AI should serve people**, not replace them  
-- 🍳 **Prep cooks run the kitchen** — and they should be treated like it  
-- ♻️ **Efficiency is survival**, but not at the cost of dignity  
-- 🪵 **Build from scratch** when the system is broken
+Built by prep cooks. Designed for real work.  
+No fluff. No corporate creep. Just flow.
 
 ---
 
-## 👀 Looking For
+## 🔧 Core Tools
 
-- Dev collaborators (especially ethical, open-source-aligned)  
-- AI researchers with a heart  
-- Anyone tired of bullshit in food systems who wants to help fix it  
+### 🧠 MEP – Mise en Place AI
+> The kitchen’s memory.  
+Responds to task updates, 86s, inventory, and shift logic.
+
+- Built with OpenAI’s GPT-4o
+- Ethical, privacy-safe, non-corporate logic
+- Netlify Function backend included (`/netlify/functions/mep.js`)
+
+### 🟢 Fló – Fair Labor Operating system
+> Schedule blocks that actually respect AM/PM balance.
+
+- Transparent, fair labor planner
+- Shift visualization with kitchen role awareness
+- Eventually auto-generates prep boards + family meal input
 
 ---
 
-## ✨ What’s Coming
+## 🌐 Live Deployment
 
-- Public testing on **Fló** and **MEP**  
-- Open source logic docs  
-- Kickstarter + community roadmap  
-- A cinematic story: _From Fire to Future_
+**🔗 Website:** [https://johnE.ai](https://johnE.ai)  
+**📁 Source:** [github.com/weggetingit/johne.ai](https://github.com/wegettingit/johne.ai)
+
+Hosted with Netlify · SSL via Let’s Encrypt · OpenAI-backed
+
+---
+
+## 🛠 Project Structure
+
