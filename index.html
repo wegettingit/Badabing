@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="The worker-first culinary platform built from the pit up — johnE.ai">
   <title>johnE.ai — AI with a soul</title>
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap" rel="stylesheet" />
 
-  <!-- Styling -->
   <style>
     body {
       font-family: 'Martian Mono', monospace;
@@ -20,11 +18,7 @@
       line-height: 1.6;
       text-align: center;
     }
-
-    h1, h2, h3 {
-      margin: 1.5rem 0 0.75rem;
-    }
-
+    h1, h2, h3 { margin: 1.5rem 0 0.75rem; }
     a.button {
       display: inline-block;
       margin: 1.5rem auto;
@@ -34,13 +28,11 @@
       text-decoration: none;
       border-radius: 5px;
     }
-
     footer {
       margin-top: 4rem;
       font-size: 0.85rem;
       color: #666;
     }
-
     #mepButton {
       position: fixed;
       bottom: 20px;
@@ -56,7 +48,6 @@
       z-index: 9999;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
-
     #mepChat {
       display: none;
       position: fixed;
@@ -72,7 +63,6 @@
       z-index: 9999;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
-
     #mepChat p { margin-bottom: 10px; }
     #mepInput {
       width: 100%;
@@ -95,12 +85,8 @@
 
   <section id="intro" style="max-width: 900px; margin: auto; margin-top: 3rem;">
     <h1>🧠 johnE.ai</h1>
-    <p><strong>AI meets mise en place.</strong><br>
-    Built by real prep cooks for the future of food work.</p>
-
-    <p>johnE.ai is a worker-first AI platform that simplifies scheduling, inventory, and kitchen communication. 
-      No fluff. No corporate creep. Just faster flow and real-time backup for people who move fast.
-    </p>
+    <p><strong>AI meets mise en place.</strong><br>Built by real prep cooks for the future of food work.</p>
+    <p>johnE.ai is a worker-first AI platform that simplifies scheduling, inventory, and kitchen communication. No fluff. No corporate creep. Just faster flow and real-time backup for people who move fast.</p>
 
     <h2>🧰 What’s Inside</h2>
     <ul style="text-align: left; max-width: 600px; margin: auto;">
@@ -114,15 +100,10 @@
     <a href="https://typebot.co/mep-mise-en-place-ai-7en1whu" target="_blank" class="button">🗣️ Talk to MEP – Live Assistant</a>
 
     <h2>🎯 Why?</h2>
-    <p>Because food workers deserve tech that respects them.<br>
-      We’ve seen the breakdowns — last-minute schedules, broken prep flow, burnout. johnE.ai is here to fix that.
-    </p>
+    <p>Because food workers deserve tech that respects them.<br>We’ve seen the breakdowns — last-minute schedules, broken prep flow, burnout. johnE.ai is here to fix that.</p>
 
     <h2>🛠️ Open Kitchen Ethos</h2>
-    <p>We’re open to dev collabs, grant partners, and hospitality rebels.<br>
-      Reach out via <a href="https://github.com/wegettingit" target="_blank">GitHub</a> or 
-      <a href="mailto:johnethany@icloud.com">email</a>.
-    </p>
+    <p>We’re open to dev collabs, grant partners, and hospitality rebels.<br>Reach out via <a href="https://github.com/wegettingit" target="_blank">GitHub</a> or <a href="mailto:johnethany@icloud.com">email</a>.</p>
   </section>
 
   <footer>
@@ -152,7 +133,7 @@
       mepResponse.innerHTML += `<p><strong>You:</strong> ${inputText}</p>`;
       const headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer sk-xyzYourWholeSecretKey"
+        "Authorization": "Bearer YOUR_OPENAI_API_KEY_HERE"
       };
       const body = {
         model: "gpt-4o",
