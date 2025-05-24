@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>johnE.ai — Kitchens Rewritten</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: monospace;
+      background-image: url('https://i.imgur.com/pB1aaCt.jpg'); /* brushed steel bg */
+      background-size: cover;
+      background-position: center;
+      color: black;
+    }
+
+    .tape {
+      background-image: url('https://i.imgur.com/WK2V34e.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 80px;
+      margin: 40px auto;
+      max-width: 400px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      font-weight: normal;
+    }
+
+    h1::before { content: "# "; }
+    h2::before { content: "## "; }
+    h3::before { content: "### "; }
+
+    .chat-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .chat-frame {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 400px;
+      height: 600px;
+      border: 2px solid black;
+      z-index: 999;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="tape"></div>
+
+    <h1>We're cooking something new.</h1>
+    <h2>Built by workers, for workers.</h2>
+    <h3>This is AI with a soul.</h3>
+
+    <p>Welcome to <strong>johnE.ai</strong> — a hospitality AI system written in the language of kitchens.  
+    You're now chatting with <strong>MEP</strong>, your mise-en-place assistant.</p>
+
+    <p><strong>Johne, LLC</strong><br>
+    Oklahoma City, OK<br>
+    &copy; 2025 JohnE.ai — All rights reserved<br>
+    Built for kitchens. Powered by real work.</p>
+  </div>
+
+  <!-- Auto-loaded ChatGPT MEP via iframe -->
+  <iframe class="chat-frame"
+    src="https://chatgpt.com/g/g-683117aaa21c81919718d7ccf3802b96-mep"
+    title="MEP Chat"
+  ></iframe>
+
+</body>
+</html>
