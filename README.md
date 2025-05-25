@@ -1,39 +1,29 @@
-# johnE.ai — Kitchens Rewritten
+# johnE.ai — AI with a Soul
 
-A human-first AI platform rebuilding kitchen systems from the pit up.
+**johnE.ai** is a worker-first platform reimagining restaurant systems with ethics and AI at the center.
 
-Built by prep cooks. Designed for real work.  
-No fluff. No corporate creep. Just flow.
+Born in a real kitchen, built by a real prep cook, this project is creating tools to serve the people who keep food moving.
 
----
+## Core Tools
+- **Fló** — Fair Labor Scheduler
+- **MEP** — Kitchen Memory + AI Assistant
+- **Ethics Docs** — Consent-first system design
+- **Docs** — Prep bibles, flow maps, transparency records
 
-## 🔧 Core Tools
+## Values
+- People first, always
+- Transparency > surveillance
+- Memory > micromanagement
+- Burnout isn’t a badge of honor
 
-### 🧠 MEP – Mise en Place AI
-> The kitchen’s memory.  
-Responds to task updates, 86s, inventory, and shift logic.
+## Status
+> 🔧 Under active development  
+> 🌎 [johnE.ai](https://johnE.ai) public site live  
+> 📣 Seeking grants, collabs, and real-world testers
 
-- Built with OpenAI’s GPT-4o
-- Ethical, privacy-safe, non-corporate logic
-- Netlify Function backend included (`/netlify/functions/mep.js`)
-
-### 🟢 Fló – Fair Labor Operating system
-> Schedule blocks that actually respect AM/PM balance.
-
-- Transparent, fair labor planner
-- Shift visualization with kitchen role awareness
-- Eventually auto-generates prep boards + family meal input
-
----
-
-## 🌐 Live Deployment
-
-**🔗 Website:** [https://johnE.ai](https://johnE.ai)  
-**📁 Source:** [github.com/weggetingit/johne.ai](https://github.com/wegettingit/johne.ai)
-
-Hosted with Netlify · SSL via Let’s Encrypt · OpenAI-backed
+## Founder
+Johne Ballew (24) — prep cook, system thinker, builder of better things
 
 ---
 
-## 🛠 Project Structure
-
+🏁 This is the beginning of a kitchen revolution
