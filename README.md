@@ -22,7 +22,7 @@ Born in a real kitchen, built by a real prep cook, this project is creating tool
 > 📣 Seeking grants, collabs, and real-world testers
 
 ## Founder
-Johne Ballew (24) — prep cook, system thinker, builder of better things
+JohnE Young (24) — prep cook, system thinker, builder of better things
 
 ---
 
