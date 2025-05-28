@@ -28,6 +28,23 @@
       color: #363434;
       text-decoration: none;
       border-radius: 5px;
+      .glow-text {
+  color: #333;
+  text-shadow: 0 0 0 transparent;
+  animation: lightUp 2s ease-in-out forwards;
+}
+
+@keyframes lightUp {
+  0% {
+    color: #333;
+    text-shadow: 0 0 0 transparent;
+  }
+  100% {
+    color: #f5f5f5;
+    text-shadow: 0 0 10px #ffffff88, 0 0 20px #ffffff44;
+  }
+}
+
     }
     footer {
       margin-top: 4rem;
@@ -42,8 +59,10 @@
   </style>
 </head>
 <body>
-  <h1>We’re cooking something new.</h1>
-  <h2>Built by workers, for workers.</h2>
+  <h1 class="glow-text">We're cooking something new.</h1><h1 class="glow-text" style="animation-delay: 0s">We're cooking something new.</h1>
+  <h2 class="glow-text" style="animation-delay: 0.5s">Built by workers, for workers.</h2>
+  <h3 class="glow-text" style="animation-delay: 1s">This is AI with a soul.</h3>
+
   <h3>This is AI with a soul.</h3>
 
   <a href="https://forms.gle/otE2xpjbwD2eEEoK7" class="button">Kitchen Closed (APPLY!!)</a>
