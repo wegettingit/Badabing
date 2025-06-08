@@ -38,26 +38,26 @@
       margin: 0 auto;
       padding: 3rem 1.5rem 3rem 1.5rem;
       text-align: center;
-      /* Ensures everything is centered inside */
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+    .nav-links {
+      margin-bottom: 2rem;
+    }
+    .nav-links a {
+      color: #e78719;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: bold;
+      font-size: 1.08em;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
     h1, h2, h3 {
       text-align: center;
       margin: 1.5rem 0 0.75rem;
-    }
-    section, ul, p {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-    ul {
-      max-width: 700px;
-      margin: 1rem auto 1.5rem auto;
-      padding-left: 1.2rem;
-      text-align: left;
-      display: inline-block;
     }
     a.button {
       display: inline-block;
@@ -102,7 +102,6 @@
     }
     @media (max-width: 800px) {
       .main-content { padding: 1.2rem 1vw; }
-      ul { margin-left: 0.7rem; }
       .page-border { border-width: 2px; }
     }
   </style>
@@ -110,57 +109,19 @@
 <body>
   <div class="page-border">
     <div class="main-content">
-      
-  <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about.html">About</a>
-    <a href="/philosophy/">Philosophy</a>
-  </div>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/philosophy/">Philosophy</a>
+      </div>
+
       <h1 class="glow-text" style="animation-delay: 0.5s">We're cooking something new.</h1>
       <h2 class="glow-text" style="animation-delay: 0.7s">Built by workers, for workers.</h2>
       <h3 class="glow-text" style="animation-delay: 1s">This is AI with a soul.</h3>
 
       <a href="https://forms.gle/otE2xpjbwD2eEEoK7" class="button">Kitchen Closed (APPLY!!)</a>
-      <a href="#intro" class="button">Learn More</a>
-
-      <section id="intro">
-        <h1>johnE.ai</h1>
-        <p><strong>AI meets mise en place.</strong><br>
-        Built by real prep cooks for the future of food work.</p>
-        <p>johnE.ai is a worker-first AI platform that simplifies scheduling, inventory, and kitchen communication. 
-          No fluff. No corporate creep. Just faster flow and real-time backup for people who move fast.</p>
-
-        <h2>What’s Inside</h2>
-        <ul>
-          <li><strong>Fló</strong> — Shift-balanced, green-themed kitchen scheduler</li>
-          <li><strong>MEP</strong> — AI assistant for tasks, 86s, inventory, and memory</li>
-          <li><strong>Docs</strong> — Recipes, systems, prep bibles</li>
-          <li><strong>Ethics</strong> — Centered on cooks, not capital</li>
-        </ul>
-
-        <h2>Try MEP</h2>
-        <a href="https://chatgpt.com/g/g-683117aaa21c81919718d7ccf3802b96-mep" target="_blank" class="button">🧠 Launch MEP (GPT Beta)</a>
-
-        <h2>MEP Ethics Logic</h2>
-        <ul>
-          <li><strong>Worker First:</strong> Never stretch staff to cover broken systems. Respect energy, not just output.</li>
-          <li><strong>Transparency:</strong> Shift swaps, 86s, family meals — MEP explains every change.</li>
-          <li><strong>Consent-Based:</strong> If someone’s struggling, MEP always asks before sharing. Privacy comes first.</li>
-          <li><strong>Human Judgment:</strong> MEP flags — never fires. No decisions without people.</li>
-          <li><strong>Go Analog:</strong> Daily option to shut MEP off after setup and cook old-school.</li>
-        </ul>
-
-        <h2>Why?</h2>
-        <p>Because food workers deserve tech that respects them.<br>
-          We’ve seen the breakdowns — last-minute schedules, broken prep flow, burnout. johnE.ai is here to fix that.
-        </p>
-
-        <h2>Open Kitchen Ethos</h2>
-        <p>We’re open to dev collabs, grant partners, and hospitality rebels.<br>
-          Reach out via <a href="https://github.com/wegettingit" target="_blank">GitHub</a> or 
-          <a href="mailto:johnethany@icloud.com">email</a>.
-        </p>
-      </section>
+      <a href="/about.html" class="button">Learn More</a>
 
       <footer>
         JohnE, LLC — Oklahoma City, OK<br>
