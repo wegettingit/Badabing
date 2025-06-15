@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="About johnE.ai — The worker-first AI platform for kitchens.">
+  <title>About | johnE.ai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* CSS Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-bg: #0f0f0f;
+      --secondary-bg: #1a1a1a;
+      --accent-orange: #e78719;
+      --text-primary: #f5f5f5;
+      --text-secondary: #b8b8b8;
+      --text-accent: #f38bcb;
+      --button-bg: #2a2a2a;
+      --button-text: #32c26c;
+      --border-glow: rgba(231, 135, 25, 0.3);
+      --shadow-glow: rgba(255, 255, 255, 0.1);
+      --gradient-primary: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Martian Mono', monospace;
+      background: var(--gradient-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Page Border & Container */
+    .page-container {
+      min-height: 100vh;
+      border: 3px solid var(--accent-orange);
+      border-radius: 8px;
+      margin: 8px;
+      background: rgba(26, 26, 26, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 
+        0 0 30px var(--border-glow),
+        inset 0 0 50px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--accent-orange) 50%, 
+        transparent 100%);
+      opacity: 0.6;
+    }
+
+    /* Navigation */
+    .navigation {
+      padding: 2rem 0 1rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(231, 135, 25, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--accent-orange);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--accent-orange);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+      background: rgba(231, 135, 25, 0.1);
+    }
+
+    .nav-links a:hover::after {
+      width: 80%;
+    }
+
+    /* Main Content */
+    .main-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem 3rem;
+    }
+
+    /* Typography */
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      text-align: center;
+      margin-bottom: 3rem;
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: glow-pulse 3s ease-in-out infinite alternate;
+      font-weight: 700;
+    }
+
+    @keyframes glow-pulse {
+      0% {
+        filter: drop-shadow(0 0 10px rgba(243, 139, 203, 0.3));
+      }
+      100% {
+        filter: drop-shadow(0 0 20px rgba(243, 139, 203, 0.6));
+      }
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--button-text);
+      margin: 2.5rem 0 1rem;
+      font-weight: 600;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    h2::before {
+      content: '▶ ';
+      position: absolute;
+      left: 0;
+      color: var(--accent-orange);
+      font-size: 0.8em;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+    }
+
+    p strong {
+      color: var(--text-primary);
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 12px;
+      border: 1px solid rgba(231, 135, 25, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .section:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(231, 135, 25, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .intro-section {
+      text-align: center;
+      background: rgba(243, 139, 203, 0.05);
+      border-color: rgba(243, 139, 203, 0.2);
+    }
+
+    .intro-section p {
+      font-size: 1.15rem;
+      color: var(--text-primary);
+    }
+
+    /* Lists */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+
+    li {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      padding-left: 1.5rem;
+      color: var(--text-secondary);
+      transition: color 0.3s ease;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    li::before {
+      content: '●';
+      position: absolute;
+      left: 0;
+      color: var(--accent-orange);
+      font-size: 0.8em;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    li:hover {
+      color: var(--text-primary);
+    }
+
+    li strong {
+      color: var(--text-accent);
+      font-weight: 600;
+    }
+
+    /* Buttons */
+    .button {
+      display: inline-block;
+      margin: 1.5rem 0;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--button-bg) 0%, #3a3a3a 100%);
+      color: var(--button-text);
+      text-decoration: none;
+      border-radius: 8px;
+      border: 2px solid var(--button-text);
+      font-size: 1.1rem;
+      font-family: inherit;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(50, 194, 108, 0.2);
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(50, 194, 108, 0.2) 50%, 
+        transparent 100%);
+      transition: left 0.5s ease;
+    }
+
+    .button:hover::before {
+      left: 100%;
+    }
+
+    .button:hover {
+      background: linear-gradient(135deg, var(--button-text) 0%, #28a745 100%);
+      color: var(--primary-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(50, 194, 108, 0.4);
+    }
+
+    /* Links */
+    a:not(.button):not(.nav-links a) {
+      color: var(--accent-orange);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:not(.button):not(.nav-links a):hover {
+      color: var(--text-accent);
+      border-bottom-color: var(--text-accent);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      border-top: 1px solid rgba(231, 135, 25, 0.2);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .page-container {
+        margin: 4px;
+        border-width: 2px;
+      }
+
+      .main-content {
+        padding: 0 1rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 2rem;
+        padding: 1.5rem 1rem;
+      }
+
+      .nav-links {
+        gap: 1.5rem;
+      }
+
+      .nav-links a {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      li {
+        padding: 0.6rem 0 0.6rem 1.2rem;
+      }
+
+      .button {
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navigation {
+        padding: 1.5rem 0 0.5rem;
+      }
+
+      .hero-title {
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        padding: 1rem;
+      }
+    }
+
+    /* Accessibility & Focus States */
+    .button:focus,
+    .nav-links a:focus,
+    a:focus {
+      outline: 2px solid var(--accent-orange);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <nav class="navigation">
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/philosophy/">Philosophy</a>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <h1 class="hero-title">About johnE.ai</h1>
+
+      <section class="section intro-section">
+        <p><strong>AI meets mise en place.</strong><br>
+        Built by real prep cooks for the future of food work.</p>
+        <p>johnE.ai is a worker-first AI platform that simplifies scheduling, inventory, and kitchen communication. 
+          No fluff. No corporate creep. Just faster flow and real-time backup for people who move fast.</p>
+      </section>
+
+      <section class="section">
+        <h2>What's Inside</h2>
+        <ul>
+          <li><strong>Fló</strong> — Shift-balanced, green-themed kitchen scheduler</li>
+          <li><strong>MEP</strong> — AI assistant for tasks, 86s, inventory, and memory</li>
+          <li><strong>Docs</strong> — Recipes, systems, prep bibles</li>
+          <li><strong>Ethics</strong> — Centered on cooks, not capital</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Try MEP</h2>
+        <a href="https://chatgpt.com/g/g-683117aaa21c81919718d7ccf3802b96-mep" target="_blank" class="button">🧠 Launch MEP (GPT Beta)</a>
+      </section>
+
+      <section class="section">
+        <h2>MEP Ethics Logic</h2>
+        <ul>
+          <li><strong>Worker First:</strong> Never stretch staff to cover broken systems. Respect energy, not just output.</li>
+          <li><strong>Transparency:</strong> Shift swaps, 86s, family meals — MEP explains every change.</li>
+          <li><strong>Consent-Based:</strong> If someone's struggling, MEP always asks before sharing. Privacy comes first.</li>
+          <li><strong>Human Judgment:</strong> MEP flags — never fires. No decisions without people.</li>
+          <li><strong>Go Analog:</strong> Daily option to shut MEP off after setup and cook old-school.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Why?</h2>
+        <p>Because food workers deserve tech that respects them.<br>
+          We've seen the breakdowns — last-minute schedules, broken prep flow, burnout. johnE.ai is here to fix that.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Open Kitchen Ethos</h2>
+        <p>We're open to dev collabs, grant partners, and hospitality rebels.<br>
+          Reach out via <a href="https://github.com/wegettingit" target="_blank">GitHub</a> or 
+          <a href="mailto:johnethany@icloud.com">email</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      JohnE, LLC — Oklahoma City, OK<br>
+      © 2025 johnE.ai · All rights reserved<br>
+      Built for kitchens. Powered by real work.
+    </footer>
+  </div>
+</body>
+</html>
